@@ -26,14 +26,28 @@ for i in lista:
 # --------------
 
 # Debido al tiempo que se demora consumiendo la segunda API, se decide guardar los resultados (lista de nombres y sinónimos) en archivos de texto.
+
+"""
+with open('sinonimos.txt', 'w') as sin_file:
+    for item in correctos:
+        sin_file.write("%s\n" % item)
+
+
 sin_txt = []
 with open("sinonimos.txt","r") as archivo:
     for linea in archivo:
         sin_txt.append(eval(linea))
 
+"""
 
+# Se leen los arcchivos d etexto para extraer la infromación.
 
 listaf_txt = []
 with open("listaf.txt","r") as archivo:
     for linea in archivo:
         listaf_txt.append(linea.rstrip())
+
+sin_txt = []
+with open("sinonimos.txt","r") as archivo:
+    for linea in archivo:
+        sin_txt.append(eval(linea))
